@@ -1,4 +1,4 @@
-# dou361.github.io
+# lingcimi.github.io
 个人博客
 
 blog结构说明
@@ -87,7 +87,7 @@ description：描述 #文章描述
 
 published：true #是否发布，默认发布
 
-permalink：/:categories/:year/:month/:day/:title.html #覆盖全局变量设定的文章发布格式
+permalink：/posts/:year/:month/:day/:title.html #覆盖全局变量设定的文章发布格式
 
 ---
 
