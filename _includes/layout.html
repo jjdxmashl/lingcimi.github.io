@@ -1,0 +1,59 @@
+{% if page.layout == 'archives' or page.layout == 'categories' or page.layout == 'tags' %}
+	{% include _partial/before_header.html %}
+		<body>
+			<header style="background:{% if site.themes.bgColor %}{{ site.themes.bgColor }};{% else %}#1e90ff;{% endif %}">{% include _partial/header.html %}</header>
+			<div id="container">
+				{{ content }}
+			</div>
+			<footer style="background:{% if site.themes.footerBgColor %}{{ site.themes.footerBgColor }};{% else %}#1f1f1f;{% endif %}">{% include _partial/footer.html %}</footer>
+			{% include _partial/after_footer.html %}
+		</body>
+	</html>
+{% elsif page.layout == 'about' %}
+	{% include _partial/before_header.html %}
+		<body>
+			<header style="background:{% if site.themes.bgColor %}{{ site.themes.bgColor }};{% else %}#1e90ff;{% endif %}">{% include _partial/header.html %}</header>
+			<div id="container">
+				{{ content }}
+			</div>
+			<footer style="background:{% if site.themes.footerBgColor %}{{ site.themes.footerBgColor }};{% else %}#1f1f1f;{% endif %}">{% include _partial/footer.html %}</footer>
+			{% include _partial/after_footer.html %}
+		</body>
+	</html>
+{% elsif page.layout == 'api' %}
+	{% include _partial/before_header.html %}
+		<body>
+			<header style="background:{% if site.themes.bgColor %}{{ site.themes.bgColor }};{% else %}#1e90ff;{% endif %}">{% include _partial/header.html %}</header>
+			<div id="container">
+				{{ content }}
+			</div>
+			<footer style="background:{% if site.themes.footerBgColor %}{{ site.themes.footerBgColor }};{% else %}#1f1f1f;{% endif %}">{% include _partial/footer.html %}</footer>
+			{% include _partial/after_footer.html %}
+		</body>
+	</html>	
+{% elsif page.layout == 'search' %}
+	{% include _partial/before_header.html %}
+		<body>
+			<header style="background:{% if site.themes.bgColor %}{{ site.themes.bgColor }};{% else %}#1e90ff;{% endif %}">{% include _partial/header.html %}</header>
+			<div id="container">
+				{% include _partial/search.html %}
+			</div>
+			<footer style="background:{% if site.themes.footerBgColor %}{{ site.themes.footerBgColor }};{% else %}#1f1f1f;{% endif %}">{% include _partial/footer.html %}</footer>
+			{% include _partial/after_footer.html %}
+		</body>
+   </html>
+{% else %}
+	{% include _partial/before_header.html %}
+		<body>
+			<header style="background:{% if site.themes.bgColor %}{{ site.themes.bgColor }};{% else %}#1e90ff;{% endif %}">{% include _partial/header.html %}</header>
+			<div id="container">
+				{{ content }}
+				{% assign item = page %}
+				{% assign table = false %}
+				{% include _partial/sidebar.html %}
+			</div>
+			<footer style="background:{% if site.themes.footerBgColor %}{{ site.themes.footerBgColor }};{% else %}#1f1f1f;{% endif %}">{% include _partial/footer.html %}</footer>
+			{% include _partial/after_footer.html %}
+		</body>
+	 </html>
+{% endif %}

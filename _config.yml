@@ -1,0 +1,128 @@
+#### 排除项
+exclude: ["README.md", ".gitignore"]
+
+#### 代码高亮
+highlighter: rouge
+
+#### 固定链接
+permalink: /posts/:year/:month/:day/:title 
+
+#### Markdown Processors
+markdown: redcarpet
+redcarpet:
+  extensions:
+    - hard_wrap
+    - no_intra_emphasis
+    - autolink
+    - strikethrough
+    - tables
+    - lax_spacing
+    - with_toc_data
+
+#### 默认属性
+defaults:
+  -
+    scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
+      
+#### 分页
+paginate: 10 ## 每页显示数量
+
+#### 网站
+title : 零次幂
+tagline: 个人博客 技术交流 经验总结与分享
+assets: /assets
+baseurl: 
+
+#### 语言
+language: zh-CN    ## 当前博客提供了三种语言: en, zh-CN, zh-TW
+
+#### 菜单
+menu:
+  首页: /
+  归档: /archives.html
+  API: /api.html
+  关于我们: /about.html
+## you can create `tags` and `categories` folders (I had created them already).
+## And create a `index.md` file in each of them.
+## set `front-matter`as
+## layout: tags (or categories)
+## title: tags (or categories)
+## ---
+
+#### 控件，提供了6种小工具。包括标签、标签云、分类、归档、RSS、友情链接。
+#### category、tag、rss、archive、tagcloud、links
+widgets: 
+- category
+- tag
+- links
+- rss
+
+
+#### 订阅
+rss: /rss.xml ## 订阅地址
+
+#### 图片相关
+imglogo:
+  enable: true             ## 是否显示网站logo。display image logo true/false.
+  src: img/logo.png        ## `.svg` and `.png` are recommended,please put image into the theme folder `/assets/source/img`.
+favicon: img/favicon.ico   ## 网站图标 size:32px*32px,`.ico` is recommended,please put image into the theme folder `/assets/source/img`.
+apple_icon: img/apple.png ## size:114px*114px,please put image into the theme folder `/assets/source/img`.
+author_img: img/author.png ## size:220px*220px.display author avatar picture.if don't want to display,please don't set this.
+banner_img: img/banner.png ## size:1920px*200px+. Banner Picture
+
+#### 主题颜色
+themes:
+    bgColor: '#1e90ff'    ##the defaut theme color is blue
+    footerBgColor: '#424242'    ##底部栏背景色
+
+#### 首页显示模式，一种是原先的卡片式，另一种是类似官方主题的文章展开式
+index:
+  expand: true           ## 首页是否展开。默认为展开式
+  excerpt_link: 查看更多  ## expand: true时的提示语。
+
+close_aside: false  #close sidebar in post page if true
+item_img_show: false ## 首页中item中是否显示封面图片
+
+#### 作者信息
+author:
+  name: 小路飞
+  email: #316988670@qq.com
+  github: #jjdxmashl
+  qq_group: #548545202
+  beian: #粤ICP备15114073号 #备案信息
+  ageLimit: 2019 #版权年限
+## if you set them, the corresponding  share button will show on the footer
+
+#### 目录
+toc:
+  article: true   ## 是否在文章中显示目录
+  aside: true     ## 是否在侧边栏显示目录
+
+#### 友情链接
+links:
+  掘金: https://gold.xitu.io
+  简书: http://www.jianshu.com
+  IT蓝豹: http://www.itlanbao.com
+  开源实验室: http://kymjs.com
+  泡在网上的日子: http://www.jcodecraeer.com
+  诸葛先生的小站: http://www.litecoder.xyz
+  江清清的技术专栏: http://www.lcode.org
+
+#### 如果想用评论功能需要额外内嵌代码
+
+#### 如果想用分享按钮需要额外内嵌代码
+
+#### 如果想网站统计需要额外内嵌代码
+
+#### 其他
+totop: true           ## if you want to scroll to top in every post set the value to true
+
+#### 搜索需要额外内嵌代码
+
+plugins:
+- jekyll-paginate
+

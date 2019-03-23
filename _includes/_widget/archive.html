@@ -1,0 +1,15 @@
+{% if site.posts | size != 0 %}
+  <div class="archiveslist">
+	<a href="{{ site.baseurl }}/archives.html">
+    <p class="asidetitle">{{ lang.archive_a }}</p>
+	</a>
+    
+	<ul class="clearfix">
+	{% for item in site.archives %}
+		{% if item[1] | size != 0 %}
+			<li><a href="{{ site.baseurl }}/archives.html/#{{ item[0] }}" title="{{ item[0] }}">{{ item[0] }}<sup>{{ item[1] | size }}</sup></a></li>
+		{% endif %}
+	{% endfor %}
+	</ul>
+  </div>
+{% endif %}
